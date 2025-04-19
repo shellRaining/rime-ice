@@ -91,7 +91,7 @@ preset_color_schemes:
     author: 雨過之後、佛振
     # 如果将字体设置为 PingFangSC-Regular
     # 会让 🈶🈚️🉑🈲🉐 这几个 Emoji 失去彩色效果，留空反而可以显示。。。
-    font_face: ""                   # 字体及大小
+    font_face: "LXGW WenKai Mono"                   # 字体及大小
     font_point: 18
     label_font_face: "Helvetica"    # 序号字体及大小
     label_font_point: 12
@@ -101,7 +101,7 @@ preset_color_schemes:
     # text_orientation: horizontal          # 文字排列方向 horizontal(默认) | vertical
     inline_preedit: true                    # 键入码（拼音）是否显示在键入位置 true | false
     inline_candidate: false                 # 候选项（词句）是否显示在键入位置 true | false
-    translucency: false                     # 磨砂： true | false
+    translucency: true                     # 磨砂： true | false
     mutual_exclusive: false                 # 色不叠加： true | false
     border_height: 0                        # 外边框 高
     border_width: 0                         # 外边框 宽
@@ -111,7 +111,7 @@ preset_color_schemes:
     shadow_size: 0                          # 阴影大小
     line_spacing: 5                         # 行间距
     base_offset: 0                          # 字基高
-    alpha: 1                                # 透明度，0~1
+    alpha: 0.95                                # 透明度，0~1
     spacing: 10                             # 拼音与候选项之间的距离 （inline_preedit: false）
     color_space: srgb                       # 色彩空间： srgb | display_p3
     back_color: 0x545554                    # 底色
