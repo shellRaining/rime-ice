@@ -23,6 +23,8 @@
 #
 # 此行之后不能写注释
 
+shellRaining	shell raining	1
+
 噷	hm
 呣	m
 呒	m

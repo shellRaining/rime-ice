@@ -31,6 +31,8 @@ app_options:
     ascii_mode: true    # 开启默认英文
   com.mitchellh.ghostty:
     ascii_mode: true
+  com.tencent.qq:
+    ascii_mode: false
   # com.microsoft.VSCode:
   #   ascii_mode: false   # 关闭默认英文
 
