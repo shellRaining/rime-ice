@@ -23,6 +23,13 @@
 #
 # 此行之后不能写注释
 
+shellRaining	shell	2
+shellRaining@gmail.com	shell	1
+Oxlint	oxlint
+Oxc	oxc	1
+Vite	vite	2
+vitest	vite	1
+
 噷	hm
 呣	m
 呒	m

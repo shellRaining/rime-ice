@@ -1,0 +1,20 @@
+# Rime squirrel settings
+# encoding: utf-8
+#
+# 用户自定义配置 - macOS 鼠须管
+# 此文件会覆盖 squirrel.yaml 中的对应配置项
+
+patch:
+  # 应用专属设置
+  app_options:
+    com.neovide.neovide:
+      ascii_mode: true    # Neovide 默认英文
+    com.mitchellh.ghostty:
+      ascii_mode: true    # Ghostty 默认英文
+    com.tencent.qq:
+      ascii_mode: false   # QQ 默认中文
+
+  # 界面样式 - 修改默认配色方案
+  "preset_color_schemes/purity_of_form_custom/font_face": "LXGW WenKai Mono"
+  "preset_color_schemes/purity_of_form_custom/translucency": true
+  "preset_color_schemes/purity_of_form_custom/alpha": 0.95
