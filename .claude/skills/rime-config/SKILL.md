@@ -65,11 +65,18 @@ patch:
 
 ### 同步上游更新
 
+**完整流程**：
 ```bash
+cd ~/Library/Rime
 git fetch upstream
 git merge upstream/main
-# 重新部署
+./clean-after-merge.sh  # 清理重新引入的文件
+git add -A
+git commit -m "chore: 清理不需要的文件"
+# 重新部署 Rime
 ```
+
+**重要**：合并上游时会重新引入已删除的文件（weasel.yaml、.github/、others/iRime 等），必须运行清理脚本
 
 ### 部署配置
 
@@ -159,3 +166,15 @@ installation.yaml
 4. 直接修改原文件导致更新冲突 - 使用补丁方式避免
 5. 文件必须在根目录 - Rime 不支持子目录配置
 6. 重新部署是必需的 - 修改配置后不会自动生效
+7. 合并上游会重新引入已删除文件 - Git 无法阻止，必须用脚本清理
+
+## 清理脚本说明
+
+`clean-after-merge.sh` 用于合并上游后删除不需要的文件：
+- Windows 配置（weasel.yaml、go.work）
+- iOS 平台配置（others/iRime、others/Hamster）
+- 开发工具（others/script、others/recipes）
+- GitHub 相关（.github/）
+- 文档图片（others/demo.webp、others/sponsor.webp）
+
+每次合并上游后必须运行此脚本
