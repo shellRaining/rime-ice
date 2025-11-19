@@ -61,6 +61,21 @@ patch:
   "preset_color_schemes/purity_of_form_custom/alpha": 0.95
 ```
 
+**rime_ice.custom.yaml 示例**（优化词库和纠错）：
+
+```yaml
+patch:
+  # 自定义短语：启用补全功能
+  custom_phrase/enable_completion: true  # 启用前缀匹配补全
+
+  # 拼写纠错：启用 ia/ai 和 ian/ain 纠错
+  # 让 xai/jai/qai 可以纠错为 xia/jia/qia，这样 yixai 可以得到"一下"
+  # 让 xain/jain/qain 可以纠错为 xian/jian/qian，这样 wofaxain 可以得到"我发现"
+  speller/algebra/+:
+    - derive/([qjx])ia$/$1ai/  # qai → qia, xai → xia, jai → jia
+    - derive/([qtpdjlxbnm])ian$/$1ain/  # xain → xian, jain → jian, qain → qian 等
+```
+
 ## 维护流程
 
 ### 同步上游更新
@@ -167,6 +182,46 @@ installation.yaml
 5. 文件必须在根目录 - Rime 不支持子目录配置
 6. 重新部署是必需的 - 修改配置后不会自动生效
 7. 合并上游会重新引入已删除文件 - Git 无法阻止，必须用脚本清理
+
+### 词库管理经验
+
+8. **custom_phrase.txt 去重** - 不要添加已在英文词库中存在的单词
+   - 检查方法：`grep "^单词" en_dicts/*.dict.yaml`
+   - 英文词库已包含常用单词（go、code、main、Amazon、NASA、Hugo 等）
+   - custom_phrase.txt 只应包含：专有名词、中英混合词、特殊缩写、个人信息
+   - 如果只是想置顶某个词，应使用 `pin_cand_filter` 而非 custom_phrase.txt
+
+9. **启用补全功能** - custom_phrase 默认不支持前缀匹配
+   - 问题：输入 `navi` 无法补全 `navidrome`，必须输入完整才出现
+   - 解决：在 rime_ice.custom.yaml 中添加 `custom_phrase/enable_completion: true`
+   - 效果：输入前缀即可看到候选（navi/navid/navidr → Navidrome）
+
+10. **拼写纠错规则** - rime_ice.schema.yaml 中部分纠错规则默认被注释
+    - 问题 1：输入 `yixai` 想得到"一下"，却出现"胰腺癌"
+      - 原因："一下"拼音是 `yi xia`，`xai` 需要纠错为 `xia`
+      - 解决：启用 `derive/([qjx])ia$/$1ai/` 规则
+    - 问题 2：输入 `wofaxain` 想得到"我发现"，却出现"我发现爱你"
+      - 原因："发现"拼音是 `fa xian`，`xain` 需要纠错为 `xian`
+      - 解决：启用 `derive/([qtpdjlxbnm])ian$/$1ain/` 规则
+    - 配置位置：rime_ice.custom.yaml 的 `speller/algebra/+` 节点
+    - 副作用：可能影响全拼简拼混输（如 `x'ai` 喜爱 → `xia` 下），但通常不影响
+
+11. **单字符禁用英文联想** - 单字符输入时过滤英文补全
+    - 问题：enable_completion 启用后，输入单字符触发英文联想
+    - 错误方案：
+      - 设置 min_phrase_length: 2 - 参数不存在
+      - 修改 custom_phrase.txt 编码为缩写 - 破坏可读性
+      - 禁用 enable_completion - 失去前缀补全
+    - 正确方案：Lua 过滤器
+      1. 创建调试过滤器，记录候选项类型到 /tmp/rime_debug.log
+      2. 分析日志：英文补全类型为 completion，中文为 phrase/user_phrase
+      3. 创建 single_char_filter.lua，单字符时过滤 completion 类型
+      4. 配置：engine/filters/+: - lua_filter@*single_char_filter
+    - 经验：
+      - 先调试验证，不盲目猜测参数
+      - Lua 过滤器必须返回含 init() 和 func() 的模块 M
+      - 候选项类型通过 cand.type 获取
+      - 使用日志文件调试比猜测高效
 
 ## 清理脚本说明
 

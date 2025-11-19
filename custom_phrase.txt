@@ -23,8 +23,9 @@
 #
 # 此行之后不能写注释
 
-shellRaining	shell	2
-shellRaining@gmail.com	shell	1
+shellRaining	shell	3
+shellRaining@gmail.com	shell	2
+soyorin.tokyo@gmail.com	soyorin	1
 Oxlint	oxlint
 Oxc	oxc	1
 Vite	vite	2
@@ -32,6 +33,7 @@ vitest	vite	1
 Comate	comate	1
 MCP	mcp	1
 SSE	sse	1
+OK	ok	10
 OKR	okr	1
 Zulu	zulu	1
 WebView	webview	1

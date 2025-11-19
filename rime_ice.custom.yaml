@@ -14,3 +14,7 @@ patch:
   speller/algebra/+:
     - derive/([qjx])ia$/$1ai/  # qai → qia, xai → xia, jai → jia
     - derive/([qtpdjlxbnm])ian$/$1ain/  # xain → xian, jain → jian, qain → qian 等
+
+  # 添加单字符过滤器，过滤单字符输入时的英文联想
+  engine/filters/+:
+    - lua_filter@*single_char_filter  # 单字符输入时过滤英文补全
