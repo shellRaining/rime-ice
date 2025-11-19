@@ -21,11 +21,3 @@ patch:
     - { when: has_menu, accept: period, send: Page_Down }
     # 启用 Control+h 作为退格键
     - { when: composing, accept: Control+h, send: BackSpace }
-
-  # 禁用 Control+Shift+3/4 的中英标点和简繁切换
-  "key_binder/bindings":
-    __remove:
-      - { when: always, toggle: ascii_punct, accept: Control+Shift+3 }
-      - { when: always, toggle: ascii_punct, accept: Control+Shift+numbersign }
-      - { when: always, toggle: traditionalization, accept: Control+Shift+4 }
-      - { when: always, toggle: traditionalization, accept: Control+Shift+dollar }
