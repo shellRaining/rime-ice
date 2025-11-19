@@ -29,6 +29,19 @@ Oxlint	oxlint
 Oxc	oxc	1
 Vite	vite	2
 vitest	vite	1
+Comate	comate	1
+MCP	mcp	1
+SSE	sse	1
+OKR	okr	1
+Zulu	zulu	1
+WebView	webview	1
+Streamable HTTP	stream	1
+Cluade Code	claude	1
+Nextcloud	nextcloud	1
+Vaultwarden	vault	1
+Bitwarden	bitwarden	1
+JSON-RPC	jsonrpc	1
+stdio	stdio	1
 
 噷	hm
 呣	m
