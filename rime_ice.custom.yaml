@@ -1,0 +1,16 @@
+# Rime schema settings
+# encoding: utf-8
+#
+# rime_ice 用户自定义配置
+# 此文件会覆盖 rime_ice.schema.yaml 中的对应配置项
+
+patch:
+  # 自定义短语：启用补全功能
+  custom_phrase/enable_completion: true  # 启用前缀匹配补全
+
+  # 拼写纠错：启用 ia/ai 和 ian/ain 纠错
+  # 让 xai/jai/qai 可以纠错为 xia/jia/qia，这样 yixai 可以得到"一下"
+  # 让 xain/jain/qain 可以纠错为 xian/jian/qian，这样 wofaxain 可以得到"我发现"
+  speller/algebra/+:
+    - derive/([qjx])ia$/$1ai/  # qai → qia, xai → xia, jai → jia
+    - derive/([qtpdjlxbnm])ian$/$1ain/  # xain → xian, jain → jian, qain → qian 等

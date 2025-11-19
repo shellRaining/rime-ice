@@ -38,6 +38,7 @@ WebView	webview	1
 Streamable HTTP	stream	1
 Cluade Code	claude	1
 Nextcloud	nextcloud	1
+Navidrome	navidrome	1
 Vaultwarden	vault	1
 Bitwarden	bitwarden	1
 JSON-RPC	jsonrpc	1
@@ -68,17 +69,4 @@ stdio	stdio	1
 又又又	uuu
 又双叒叕	uuuu
 
-go	go
-Golang	golang
-Hugo	hugo
-goto	goto
-domain	domain
-TODO	todo
-Dota	dota
-main	main
-Amazon	amazon
-NASA	nasa
-gone	gone
 Go程	gocheng
-code	code
-SOHO	soho
