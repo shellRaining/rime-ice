@@ -14,6 +14,7 @@ patch:
   speller/algebra/+:
     - derive/([qjx])ia$/$1ai/  # qai → qia, xai → xia, jai → jia
     - derive/([qtpdjlxbnm])ian$/$1ain/  # xain → xian, jain → jian, qain → qian 等
+    - derive/^tian$/itan/  # tian → itan (允许输入 itan 得到 tian 的词)
 
   # 添加单字符过滤器，过滤单字符输入时的英文联想
   engine/filters/+:

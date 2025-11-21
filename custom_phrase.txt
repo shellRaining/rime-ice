@@ -33,6 +33,8 @@ vitest	vite	1
 Comate	comate	1
 MCP	mcp	1
 SSE	sse	1
+Figma	figma	1
+JSON	json	1
 OK	ok	10
 OKR	okr	1
 Zulu	zulu	1

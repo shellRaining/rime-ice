@@ -223,6 +223,30 @@ installation.yaml
       - 候选项类型通过 cand.type 获取
       - 使用日志文件调试比猜测高效
 
+12. **derive 规则方向理解错误** - 拼写派生规则的正确方向
+    - 问题：输入 `itanjia` 想得到"添加"（tianjia），首次尝试写成 `derive/^itan$/tian/` 未生效
+    - 原因：**误解了 derive 规则的方向**
+      - derive 的语法：`derive/原始拼音/派生拼音/`
+      - 含义：允许用户使用"派生拼音"来输入"原始拼音"对应的词
+      - 词库中的词条标注的是**原始拼音**（如"添加"标注为 tianjia）
+    - 正确理解：
+      - `derive/^tian$/itan/` 意思是：将词库中标注为 `tian` 的词，派生出 `itan` 拼写
+      - 效果：用户输入 `itanjia` 时，可以匹配到词库中 `tianjia`（添加）的词条
+    - 错误理解：
+      - `derive/^itan$/tian/` 意思是：将词库中标注为 `itan` 的词，派生出 `tian` 拼写
+      - 问题：词库中根本没有标注为 `itan` 的词（因为 itan 不是合法拼音），所以无法派生
+    - 验证方法：检查是否为合法拼音组合
+      - `itan` 不是合法汉语拼音，词库中不会有这样的标注
+      - `tian` 是合法拼音，词库中有大量词条（天、添、田、甜等）
+      - 因此应该从 `tian`（存在）派生到 `itan`（不存在但允许输入）
+    - 经验总结：
+      - derive 规则：`derive/词库中存在的拼音/允许用户输入的拼音/`
+      - 方向：从正确 → 错误，从规范 → 容错
+      - 其他示例：
+        - `derive/^([zcs])h/$1/`：zh/ch/sh（正确）→ z/c/s（容错）
+        - `derive/([qjx])ia$/$1ai/`：qia/jia/xia（正确）→ qai/jai/xai（容错）
+        - `derive/^tian$/itan/`：tian（正确）→ itan（容错）
+
 ## 清理脚本说明
 
 `clean-after-merge.sh` 用于合并上游后删除不需要的文件：
