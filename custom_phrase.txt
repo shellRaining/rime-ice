@@ -40,7 +40,7 @@ OKR	okr	1
 Zulu	zulu	1
 WebView	webview	1
 Streamable HTTP	stream	1
-Cluade Code	claude	1
+Claude Code	claude	1
 Nextcloud	nextcloud	1
 Navidrome	navidrome	1
 Vaultwarden	vault	1
