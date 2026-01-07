@@ -46,6 +46,7 @@ Navidrome	navidrome	1
 Vaultwarden	vault	1
 Bitwarden	bitwarden	1
 JSON-RPC	jsonrpc	1
+Antigravity	antigravity	1
 stdio	stdio	1
 
 噷	hm

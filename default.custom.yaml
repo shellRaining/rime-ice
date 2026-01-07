@@ -9,9 +9,8 @@ patch:
   schema_list:
     - schema: rime_ice  # 雾凇拼音（全拼）
 
-  # 方案选单快捷键 - 删除 Control+grave
+  # 方案选单快捷键
   "switcher/hotkeys":
-    - F4
     - Control+Shift+grave
 
   # 快捷键配置
