@@ -74,4 +74,6 @@ stdio	stdio	1
 又又又	uuu
 又双叒叕	uuuu
 
+tmux	tmux	1
+
 Go程	gocheng
