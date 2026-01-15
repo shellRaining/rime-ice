@@ -36,6 +36,11 @@ SSE	sse	1
 Figma	figma	1
 JSON	json	1
 OK	ok	10
+css	css	10
+js	js	10
+html	html	10
+git	git	10
+bash	bash	10
 OKR	okr	1
 Zulu	zulu	1
 WebView	webview	1
