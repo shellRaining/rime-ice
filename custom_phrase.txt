@@ -80,5 +80,7 @@ stdio	stdio	1
 又双叒叕	uuuu
 
 tmux	tmux	1
+Replit	replit	1
+Supabase	supabase	1
 
 Go程	gocheng

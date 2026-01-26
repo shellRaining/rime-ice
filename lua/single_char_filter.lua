@@ -4,7 +4,7 @@
 --[[
 ## 功能
 1. 短输入过滤：输入码 ≤2 字符时，过滤 completion 类型候选（英文前缀补全）
-2. 精确匹配置顶：纯英文输入时，将完全匹配的英文单词置顶
+2. 精确匹配置顶：纯英文输入时，将完全匹配的英文单词置顶（黑名单除外）
 
 ## 背景
 Rime 候选词排序由两个阶段决定：
@@ -19,9 +19,37 @@ Rime 候选词排序由两个阶段决定：
 - 输入 "b" 时不想看到 "�" "Ⓑ" 等 completion 补全
 - 输入 "brew" 时，因拼音权重 1.2 > 英文权重 1.1，"不热" 排在 "brew" 前面
   本过滤器将精确匹配的英文单词提升到首位
+
+## 黑名单
+某些英文单词虽然是合法英文，但作为拼音更常用（如 rang/yang），
+这些词不应被置顶，而应遵循 reduce_english_filter 的降低处理。
 --]]
 
 local M = {}
+
+-- 黑名单：这些词是合法英文，但作为拼音更常用，不进行置顶
+-- 复用 reduce_english_filter.lua 中的内置列表
+local blacklist = {
+    "rang", "yang", "yin", "yan", "yen", "zen",
+    "women", "womens",  -- wo men (我们)
+    "tad",  -- ta de (他的)
+    "bang", "tang", "hang", "lang", "gang", "sang", "wang", "fang",
+    "bing", "ding", "ling", "ming", "ning", "ping", "ting", "jing", "xing",
+    "long", "dong", "gong", "kong", "song", "tong", "nong",
+    "dang", "nang", "cang", "zang", "kang",
+    "deng", "feng", "geng", "heng", "leng", "meng", "neng", "peng", "seng", "teng", "weng", "zeng",
+    "hong", "rong", "yong", "zong", "cong",
+    "liang", "jiang", "xiang", "qiang", "niang",
+    "ban", "can", "dan", "fan", "gan", "han", "lan", "man", "nan", "pan", "ran", "san", "tan", "wan", "zan",
+    "ben", "fen", "gen", "hen", "ken", "men", "nen", "pen", "ren", "sen", "wen", "zen",
+    "bin", "din", "fin", "gin", "kin", "lin", "min", "pin", "sin", "tin", "win", "yin",
+    "bun", "dun", "fun", "gun", "hun", "jun", "kun", "nun", "pun", "run", "sun", "tun",
+    "chi", "shi", "zhi",
+}
+local blacklist_set = {}
+for _, word in ipairs(blacklist) do
+    blacklist_set[word:lower()] = true
+end
 
 function M.init(env)
     -- 初始化函数，可以为空
@@ -61,8 +89,8 @@ function M.func(input, env)
             count = count + 1
             local cand_text_lower = cand.text:lower()
 
-            -- 找到完全匹配的英文单词（忽略大小写）
-            if exact_match == nil and cand_text_lower == input_lower and is_pure_english(cand.text) then
+            -- 找到完全匹配的英文单词（忽略大小写），但排除黑名单中的词
+            if exact_match == nil and cand_text_lower == input_lower and is_pure_english(cand.text) and not blacklist_set[input_lower] then
                 exact_match = cand
             else
                 table.insert(others, cand)
