@@ -45,6 +45,7 @@ local blacklist = {
     "bin", "din", "fin", "gin", "kin", "lin", "min", "pin", "sin", "tin", "win", "yin",
     "bun", "dun", "fun", "gun", "hun", "jun", "kun", "nun", "pun", "run", "sun", "tun",
     "chi", "shi", "zhi",
+    "fade", "shade",
 }
 local blacklist_set = {}
 for _, word in ipairs(blacklist) do

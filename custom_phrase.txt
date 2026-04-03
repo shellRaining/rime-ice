@@ -84,3 +84,4 @@ Replit	replit	1
 Supabase	supabase	1
 
 Go程	gocheng
+OpenCode	opencode
