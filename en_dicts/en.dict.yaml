@@ -17,7 +17,7 @@
 # 转化应当大写的单词
 ---
 name: en
-version: "2026-04-01"
+version: "2026-05-01"
 sort: by_weight
 ...
 # +_+
@@ -61,7 +61,11 @@ abnormalities	abnormalities
 aboard	aboard
 abolish	abolish
 aboriginal	aboriginal
+abort	abort
+aborted	aborted
+aborting	aborting
 abortion	abortion
+aborts	aborts
 abound	abound
 about	about
 above	above
@@ -1283,6 +1287,8 @@ assets	assets
 asshole	asshole
 assign	assign
 assigned	assigned
+assignee	assignee
+assignees	assignees
 assigning	assigning
 assignment	assignment
 assignments	assignments
@@ -1581,6 +1587,7 @@ azure	azure
 babe	babe
 babes	babes
 babies	babies
+baboon	baboon
 baby	baby
 Babylon	Babylon
 # bac	bac
@@ -1623,6 +1630,7 @@ badly	badly
 badminton	badminton
 baffle	baffle
 bag	bag
+bagel	bagel
 baggage	baggage
 Baghdad	Baghdad
 bags	bags
@@ -1820,6 +1828,7 @@ beacon	beacon
 bead	bead
 beaded	beaded
 beads	beads
+beaker	beaker
 beam	beam
 beams	beams
 bean	bean
@@ -2304,6 +2313,7 @@ bonfire	bonfire
 Bonn	Bonn
 bonnie	bonnie
 Bono	Bono
+bonobo	bonobo
 bonsai	bonsai
 # bontril	bontril
 bonus	bonus
@@ -2387,6 +2397,7 @@ bound	bound
 boundaries	boundaries
 boundary	boundary
 bounded	bounded
+bounding	bounding
 bounds	bounds
 bounty	bounty
 bouquet	bouquet
@@ -2535,6 +2546,7 @@ brim	brim
 bring	bring
 bringing	bringing
 brings	brings
+brioche	brioche
 Brisbane	Brisbane
 brisk	brisk
 Bristol	Bristol
@@ -2860,12 +2872,13 @@ camcorders	camcorders
 Camden	Camden
 came	came
 camel	camel
-cameltoe	cameltoe
+# cameltoe	cameltoe
 camera	camera
 cameras	cameras
 Cameron	Cameron
 Cameroon	Cameroon
-Camino	Camino
+# Camino	Camino
+camisole	camisole
 camp	camp
 campaign	campaign
 campaigns	campaigns
@@ -2932,6 +2945,7 @@ capacities	capacities
 capacitor	capacitor
 capacity	capacity
 cape	cape
+capellini	capellini
 capita	capita
 capital	capital
 capitalism	capitalism
@@ -3527,6 +3541,7 @@ churches	churches
 Churchill	Churchill
 # ci	ci
 CIA	CIA
+ciabatta	ciabatta
 cialis	cialis
 ciao	ciao
 Ciara	Ciara
@@ -3969,6 +3984,7 @@ commerce	commerce
 commercial	commercial
 commercially	commercially
 commercials	commercials
+commissary	commissary
 commission	commission
 commissioned	commissioned
 commissioner	commissioner
@@ -4809,6 +4825,7 @@ Croatia	Croatia
 Croatian	Croatian
 crochet	crochet
 crocodile	crocodile
+croft	croft
 croissant	croissant
 Croix	Croix
 cron	cron
@@ -5448,6 +5465,7 @@ deprived	deprived
 dept	dept
 depth	depth
 depths	depths
+deputies	deputies
 deputy	deputy
 der	der
 derby	derby
@@ -5460,6 +5478,7 @@ derive	derive
 derived	derived
 dermal	dermal
 dermatology	dermatology
+derrick	derrick
 # des	des
 desc	desc
 descend	descend
@@ -5610,6 +5629,7 @@ diagnosis	diagnosis
 diagnostic	diagnostic
 diagnostics	diagnostics
 diagonal	diagonal
+diagonally	diagonally
 diagram	diagram
 diagrams	diagrams
 dial	dial
@@ -6837,6 +6857,8 @@ environmental	environmental
 environmentally	environmentally
 environments	environments
 envisage	envisage
+envoy	envoy
+envoys	envoys
 envy	envy
 Enya	Enya
 enzyme	enzyme
@@ -7394,6 +7416,7 @@ far	far
 fare	fare
 fares	fares
 farewell	farewell
+farfalle	farfalle
 Fargo	Fargo
 farm	farm
 farmer	farmer
@@ -7551,6 +7574,7 @@ fetch	fetch
 # fetisch	fetisch
 fetish	fetish
 fetishism	fetishism
+fettuccine	fettuccine
 fetus	fetus
 feudal	feudal
 fever	fever
@@ -7867,6 +7891,7 @@ Fn	Fn
 # fo	fo
 foam	foam
 fob	fob
+focaccia	focaccia
 focal	focal
 focus	focus
 focused	focused
@@ -8238,6 +8263,7 @@ further	further
 furthermore	furthermore
 fury	fury
 fuse	fuse
+fusilli	fusilli
 fusion	fusion
 fuss	fuss
 fusty	fusty
@@ -8488,6 +8514,7 @@ GHz	GHz
 # gia	gia
 giant	giant
 giants	giants
+gibbon	gibbon
 Gibbs	Gibbs
 Gibraltar	Gibraltar
 Gibson	Gibson
@@ -9367,6 +9394,7 @@ hint	hint
 hints	hints
 hip	hip
 # hipaa	hipaa
+hippo	hippo
 hippopotamus	hippopotamus
 hips	hips
 hire	hire
@@ -10462,6 +10490,7 @@ inverse	inverse
 inversely	inversely
 invert	invert
 invertebrate	invertebrate
+invertebrates	invertebrates
 inverted	inverted
 inverter	inverter
 invest	invest
@@ -10777,6 +10806,9 @@ Joe	Joe
 Joel	Joel
 Joey	Joey
 jog	jog
+jogged	jogged
+jogging	jogging
+jogs	jogs
 Johan	Johan
 Johann	Johann
 Johannes	Johannes
@@ -11162,6 +11194,10 @@ labeling	labeling
 labelled	labelled
 labelling	labelling
 labels	labels
+labia	labia
+labial	labial
+labiate	labiate
+labium	labium
 labor	labor
 laboratories	laboratories
 laboratory	laboratory
@@ -11271,6 +11307,7 @@ larva	larva
 larvae	larvae
 # las	las
 Las Vegas	LasVegas
+lasagna	lasagna
 laser	laser
 # LaserJet	LaserJet
 lasers	lasers
@@ -11642,8 +11679,8 @@ lines	lines
 lineup	lineup
 ling	ling
 linger	linger
-# lingere	lingere
 lingerie	lingerie
+linguine	linguine
 linguistic	linguistic
 linguistics	linguistics
 lining	lining
@@ -11928,6 +11965,7 @@ Luna	Luna
 lunar	lunar
 lunch	lunch
 luncheon	luncheon
+lunchroom	lunchroom
 Lund	Lund
 lung	lung
 lungs	lungs
@@ -11966,7 +12004,9 @@ lyrics	lyrics
 # ma	ma
 Mac	Mac
 Macao	Macao
+macaroni	macaroni
 Macau	Macau
+macaw	macaw
 MacDonald	MacDonald
 Macedonia	Macedonia
 # mach	mach
@@ -12345,6 +12385,7 @@ maverick	maverick
 mavericks	mavericks
 max	max
 maxi	maxi
+maxilla	maxilla
 maxim	maxim
 maximal	maximal
 maximize	maximize
@@ -12673,6 +12714,7 @@ midst	midst
 midtown	midtown
 midway	midway
 Midwest	Midwest
+midwife	midwife
 Mifflin	Mifflin
 might	might
 mighty	mighty
@@ -12947,6 +12989,7 @@ mondo	mondo
 monetary	monetary
 money	money
 Mongolia	Mongolia
+mongrel	mongrel
 Monica	Monica
 monies	monies
 monitor	monitor
@@ -13235,6 +13278,7 @@ mystic	mystic
 mystical	mystical
 myth	myth
 mythology	mythology
+mythos	mythos
 myths	myths
 # mz	mz
 # n	n
@@ -13335,6 +13379,7 @@ navy	navy
 nay	nay
 Nazi	Nazi
 Nazis	Nazis
+Nazism	Nazism
 # nb	nb
 NBA	NBA
 NBC	NBC
@@ -13788,6 +13833,7 @@ obligations	obligations
 oblige	oblige
 obliged	obliged
 oblique	oblique
+oblong	oblong
 # obs	obs
 obscene	obscene
 obscure	obscure
@@ -13864,6 +13910,8 @@ odour	odour
 Odyssey	Odyssey
 # oe	oe
 OECD	OECD
+oedipal	oedipal
+Oedipus	Oedipus
 # oem	oem
 of	of
 off	off
@@ -13944,6 +13992,8 @@ ombudsman	ombudsman
 omega	omega
 omelet	omelet
 omelette	omelette
+omen	omen
+omens	omens
 OMG	OMG
 omicron	omicron
 omission	omission
@@ -14069,6 +14119,7 @@ orchestra	orchestra
 orchid	orchid
 # ord	ord
 ordain	ordain
+ordeal	ordeal
 order	order
 ordered	ordered
 ordering	ordering
@@ -14081,6 +14132,7 @@ ordinary	ordinary
 ordination	ordination
 # ordinator	ordinator
 ore	ore
+orecchiette	orecchiette
 Oregon	Oregon
 # orf	orf
 org	org
@@ -14152,6 +14204,7 @@ osmium	osmium
 OSS	OSS
 osteoporosis	osteoporosis
 # ostg	ostg
+ostracism	ostracism
 # osu	osu
 # osx	osx
 # ot	ot
@@ -14410,6 +14463,7 @@ papilla	papilla
 papillae	papillae
 papillate	papillate
 papillose	papillose
+pappardelle	pappardelle
 Papua	Papua
 papule	papule
 par	par
@@ -14498,7 +14552,7 @@ parts	parts
 party	party
 # pas	pas
 Pasadena	Pasadena
-pascal	pascal
+Pascal	Pascal
 paso	paso
 pass	pass
 passage	passage
@@ -14673,6 +14727,7 @@ peninsula	peninsula
 peninsular	peninsular
 penis	penis
 # penn	penn
+penne	penne
 Pennsylvania	Pennsylvania
 Penny	Penny
 penny	penny
@@ -14844,7 +14899,7 @@ phenomenon	phenomenon
 phenotype	phenotype
 phentermine	phentermine
 phi	phi
-phil	phil
+Phil	Phil
 Philadelphia	Philadelphia
 philanthropy	philanthropy
 Philip	Philip
@@ -14856,6 +14911,8 @@ Phillies	Phillies
 Phillip	Phillip
 Phillips	Phillips
 Philly	Philly
+philologist	philologist
+philology	philology
 philosopher	philosopher
 philosophers	philosophers
 philosophical	philosophical
@@ -15005,6 +15062,7 @@ pistols	pistols
 piston	piston
 pistons	pistons
 pit	pit
+pita	pita
 pitaya	pitaya
 # pitbull	pitbull
 Pitcairn	Pitcairn
@@ -15245,6 +15303,7 @@ pooh	pooh
 pool	pool
 Poole	Poole
 pools	pools
+poop	poop
 poor	poor
 poorest	poorest
 poorly	poorly
@@ -15769,6 +15828,7 @@ proper	proper
 properly	properly
 properties	properties
 property	property
+prophecies	prophecies
 prophecy	prophecy
 prophet	prophet
 prophetic	prophetic
@@ -16177,6 +16237,10 @@ Rammstein	Rammstein
 Ramon	Ramon
 Ramones	Ramones
 ramp	ramp
+rampage	rampage
+rampaged	rampaged
+rampages	rampages
+rampaging	rampaging
 ramps	ramps
 rams	rams
 Ramsey	Ramsey
@@ -16898,6 +16962,7 @@ retains	retains
 retard	retard
 retardation	retardation
 retention	retention
+reticle	reticle
 retina	retina
 retire	retire
 retired	retired
@@ -18536,6 +18601,7 @@ snail	snail
 snake	snake
 snakes	snakes
 snap	snap
+snapdragon	snapdragon
 snapper	snapper
 snapshot	snapshot
 snapshots	snapshots
@@ -20492,6 +20558,8 @@ torso	torso
 tort	tort
 torture	torture
 tortured	tortured
+tortures	tortures
+torturing	torturing
 Tory	Tory
 # tos	tos
 toshiba	toshiba
@@ -21120,6 +21188,8 @@ universe	universe
 universities	universities
 university	university
 Unix	Unix
+unknowing	unknowing
+unknowingly	unknowingly
 unknown	unknown
 unlawful	unlawful
 unleashed	unleashed
@@ -21454,6 +21524,7 @@ Verisign	Verisign
 veritas	veritas
 verizon	verizon
 # verlag	verlag
+vermicelli	vermicelli
 Vermont	Vermont
 vernacular	vernacular
 vernon	vernon
@@ -21482,6 +21553,7 @@ vessel	vessel
 vessels	vessels
 vest	vest
 vested	vested
+vestibule	vestibule
 vests	vests
 vet	vet
 veteran	veteran
