@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,10 +20,11 @@ jobs:
 
       - name: Create zip package
         run: |
-          zip -r release-${{ steps.date.outputs.date }}.zip . -x '.git/*'
+          zip -r Release-${{ steps.date.outputs.date }}.zip . -x '.git/*'
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: release-${{ steps.date.outputs.date }}
-          path: release-${{ steps.date.outputs.date }}.zip
+          tag_name: Release-${{ steps.date.outputs.date }}
+          name: Release-${{ steps.date.outputs.date }}
+          files: Release-${{ steps.date.outputs.date }}.zip
