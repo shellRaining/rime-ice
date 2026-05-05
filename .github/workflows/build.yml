@@ -1,0 +1,26 @@
+name: Build and Package
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y%m%d')" >> $GITHUB_OUTPUT
+
+      - name: Create zip package
+        run: |
+          zip -r release-${{ steps.date.outputs.date }}.zip . -x '.git/*'
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-${{ steps.date.outputs.date }}
+          path: release-${{ steps.date.outputs.date }}.zip
