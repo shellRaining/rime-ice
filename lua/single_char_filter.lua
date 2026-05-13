@@ -45,6 +45,7 @@ local blacklist = {
     "bin", "din", "fin", "gin", "kin", "lin", "min", "pin", "sin", "tin", "win", "yin",
     "bun", "dun", "fun", "gun", "hun", "jun", "kun", "nun", "pun", "run", "sun", "tun",
     "chi", "shi", "zhi",
+    "duo",  -- duo (多/朵/躲)
     "fade", "shade",
 }
 local blacklist_set = {}

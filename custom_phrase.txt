@@ -86,3 +86,4 @@ Supabase	supabase	1
 Go程	gocheng
 OpenCode	opencode
 Superpowers	superpowers
+DNS	dns	2

@@ -24,7 +24,6 @@ patch:
   "pin_cand_filter/+":
     - ne	呢
     - na	那 哪 拿 呐
-    - duo	多 朵 躲
 
   # 屏蔽容易误输入的英文单词
   "melt_eng/dictionary_exclude/+":
