@@ -13,6 +13,8 @@ patch:
       ascii_mode: true    # Ghostty 默认英文
     com.tencent.qq:
       ascii_mode: false   # QQ 默认中文
+    com.cmuxterm.app:
+      ascii_mode: true    # cmux 默认英文
 
   # 界面样式 - 修改默认配色方案
   "preset_color_schemes/purity_of_form_custom/font_face": "LXGW WenKai Mono"
