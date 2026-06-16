@@ -11,8 +11,15 @@ rm -f weasel.yaml go.work
 # 删除 iOS 平台配置
 rm -rf others/iRime others/Hamster others/双拼补丁示例
 
-# 删除开发工具
-rm -rf others/script others/recipes others/pages
+# 删除不用的双拼方案
+rm -f double_pinyin*.schema.yaml
+
+# 删除开发工具和可选方案
+rm -rf others/script others/recipes others/pages others/no_lua_schema
+
+# 删除补丁示例和上游文档变更中不保留的文件
+rm -rf others/patch_examples
+rm -f others/docs/Changelog.md
 
 # 删除 GitHub 相关
 rm -rf .github
