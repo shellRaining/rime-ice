@@ -47,6 +47,7 @@ local blacklist = {
     "chi", "shi", "zhi",
     "duo",  -- duo (多/朵/躲)
     "fade", "shade",
+    "guiding",  -- gui ding (规定)
 }
 local blacklist_set = {}
 for _, word in ipairs(blacklist) do
