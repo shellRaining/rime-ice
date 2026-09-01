@@ -247,6 +247,21 @@ installation.yaml
         - `derive/([qjx])ia$/$1ai/`：qia/jia/xia（正确）→ qai/jai/xai（容错）
         - `derive/^tian$/itan/`：tian（正确）→ itan（容错）
 
+13. **合法拼音的英文单词被置顶** - single_char_filter 精确匹配逻辑的副作用
+    - 问题：输入 `yuan`（合法拼音），第一个候选是英文单词 yuan 而非"元/圆/原"
+    - 原因：single_char_filter.lua 的"精确匹配置顶"逻辑：输入码 >2 且纯英文时，
+      将与输入完全匹配的英文候选提升到第一位；yuan 不在黑名单中，因此被置顶
+    - 错误方案：给 melt_eng 加 `dictionary_exclude` 参数排除单词
+      - table_translator 根本不存在该参数
+      - Rime 补丁中写不存在的参数不会报错，patch 静默无效，容易误以为已生效
+    - 正确方案：把单词（小写）加入 lua/single_char_filter.lua 的 blacklist
+      - 跳过置顶后排序自然恢复：script_translator 权重 1.2 > melt_eng 权重 1.1
+      - 中文候选自然排在英文前面，无需其他配置
+    - 判断标准：
+      - 输入码本身是合法拼音（yuan/tai/rang 等）→ 加入黑名单，中文优先
+      - 输入码是纯英文词汇（brew/code）→ 不加黑名单，置顶是期望行为
+    - 经验：排查"配置不生效"时，先到 schema 原文件确认参数是否存在，不要凭记忆写补丁
+
 ## 清理脚本说明
 
 `clean-after-merge.sh` 用于合并上游后删除不需要的文件：

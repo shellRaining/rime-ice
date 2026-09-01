@@ -20,12 +20,11 @@ patch:
   engine/filters/+:
     - lua_filter@*single_char_filter  # 单字符输入时过滤英文补全
 
-  # 置顶候选：ne → 呢，压过英文 Nextcloud
+  # 置顶候选：ne → 呢，压过英文 Nextcloud；shanghai/Beijing 优先显示中文地名
   "pin_cand_filter/+":
     - ne	呢
     - na	那 哪 拿 呐
     - guiding	规定
+    - shanghai	上海
+    - beijing	北京
 
-  # 屏蔽容易误输入的英文单词
-  "melt_eng/dictionary_exclude/+":
-    - Tai

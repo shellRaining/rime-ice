@@ -46,8 +46,11 @@ local blacklist = {
     "bun", "dun", "fun", "gun", "hun", "jun", "kun", "nun", "pun", "run", "sun", "tun",
     "chi", "shi", "zhi",
     "duo",  -- duo (多/朵/躲)
-    "fade", "shade",
+    "fade", "shade", "lie", "name",  -- name 优先显示中文拼音候选（那么）
+    "yuan",  -- 元/圆/原 优先于英文 yuan（货币单位）
     "guiding",  -- gui ding (规定)
+    "shanghai",  -- 上海优先于英文 shanghai
+    "beijing",   -- 北京优先于英文 Beijing
 }
 local blacklist_set = {}
 for _, word in ipairs(blacklist) do
