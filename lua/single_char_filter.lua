@@ -51,6 +51,7 @@ local blacklist = {
     "guiding",  -- gui ding (规定)
     "shanghai",  -- 上海优先于英文 shanghai
     "beijing",   -- 北京优先于英文 Beijing
+    "huobi",  -- 货币/货比优先于英文 Huobi
 }
 local blacklist_set = {}
 for _, word in ipairs(blacklist) do
